@@ -1,0 +1,1411 @@
+{
+  "source_base_path": "C:/UnityProjects/Pizzeria Framework/Packages/com.swish.pizzeriaframework",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.AI.Animatronics.AnimatronicBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.AI.Animatronics.AnimatronicBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.AI.Animatronics.AnimatronicBase",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.AI.Animatronics.AnimatronicBase.yml\" sourcestartlinenumber=\"1\">Base abstract class for all animatronics in the framework.\nManages the asynchronous AI tick loops, components injection, modular strategy handlers, movement, and event subscriptions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.AI.Animatronics.AnimatronicCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.AI.Animatronics.AnimatronicCondition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.AI.Animatronics.AnimatronicCondition",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.AI.Animatronics.AnimatronicCondition.yml\" sourcestartlinenumber=\"1\">Abstract base class for custom AI movement blockers (e.g., stopping when observed by cameras).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.AI.Animatronics.AnimatronicNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.AI.Animatronics.AnimatronicNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.AI.Animatronics.AnimatronicNode",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.AI.Animatronics.AnimatronicNode.yml\" sourcestartlinenumber=\"1\">Defines a single spatial anchor junction points layout representation within the path matrix graph mesh hierarchy.\nHandles pose clip asset bindings and processes localized entry or exit callback triggers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.AI.Animatronics.PathConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.AI.Animatronics.PathConnection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.AI.Animatronics.PathConnection",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.AI.Animatronics.PathConnection.yml\" sourcestartlinenumber=\"1\">Serializable compound structural block defining an outbound path connection routing option,\nits statistical weight ratio parameter, and condition layout validation dependencies.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.AI.Animatronics.PathValidationArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.AI.Animatronics.PathValidationArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.AI.Animatronics.PathValidationArgs",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.AI.Animatronics.PathValidationArgs.yml\" sourcestartlinenumber=\"1\">Data container class that encapsulates state results during the path validation processing pass.\nUsed to signal whether a custom rule evaluation has blocked an outbound node connection.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.AI.Animatronics.StandardAnimatronic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.AI.Animatronics.StandardAnimatronic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.AI.Animatronics.StandardAnimatronic",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.AI.Animatronics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.AI.Animatronics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.AI.Animatronics",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Attributes.CommandAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Attributes.CommandAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Attributes.CommandAttribute",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Attributes.MinMaxSliderAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Attributes.MinMaxSliderAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Attributes.MinMaxSliderAttribute",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Attributes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Attributes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Components.DefaultAnimationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Components.DefaultAnimationHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Components.DefaultAnimationHandler",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Components.DefaultAnimationHandler.yml\" sourcestartlinenumber=\"1\">Component managing animatronic animations using low-overhead PlayableGraphs.\nHandles instant node pose baking and full-speed jumpscare animations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Components.InstantMovementHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Components.InstantMovementHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Components.InstantMovementHandler",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Components.InstantMovementHandler.yml\" sourcestartlinenumber=\"1\">Movement strategy component that handles instant teleportation of an animatronic between nodes.\nProvides low-overhead positioning suitable for classic FNAF mechanics where animatronics change rooms instantly.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Components.StandardAILogic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Components.StandardAILogic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Components.StandardAILogic",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Components.StandardAILogic.yml\" sourcestartlinenumber=\"1\">Custom FNAF path-finding AI logic handler strategy.\nImplements weighted node evaluation, dynamic distance-to-office difficulty scaling, and automated fallback logic.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Components.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Components",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.Commands.PizzeriaBaseCommands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.Commands.PizzeriaBaseCommands.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging.Commands.PizzeriaBaseCommands",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.Commands.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging.Commands",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.Console.Command.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.Console.Command.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging.Console.Command",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.Console.Console.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.Console.Console.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging.Console.Console",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.Console.TMP_LinkHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.Console.TMP_LinkHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging.Console.TMP_LinkHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.Console.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.Console.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging.Console",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.Monitoring.PizzeriaPerfMonitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.Monitoring.PizzeriaPerfMonitor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging.Monitoring.PizzeriaPerfMonitor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.Monitoring.PizzeriaUiGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.Monitoring.PizzeriaUiGraph.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging.Monitoring.PizzeriaUiGraph",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.Monitoring.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.Monitoring.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging.Monitoring",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.PizzeriaLogCollector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.PizzeriaLogCollector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging.PizzeriaLogCollector",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Debugging.PizzeriaLogCollector.yml\" sourcestartlinenumber=\"1\">Lightweight background log collector that captures Unity logs in all builds.\nSurvives scene loads and automatically dumps logs on crash.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Debugging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Debugging.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Debugging",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Enums.CloseTransitionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Enums.CloseTransitionType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Enums.CloseTransitionType",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Enums.CloseTransitionType.yml\" sourcestartlinenumber=\"1\">Supported visual transition animation types when a menu page exits the viewport.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Enums.ConditionOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Enums.ConditionOperator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Enums.ConditionOperator",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Enums.OpenTransitionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Enums.OpenTransitionType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Enums.OpenTransitionType",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Enums.OpenTransitionType.yml\" sourcestartlinenumber=\"1\">Supported visual transition animation types when a menu page enters the viewport.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Enums.PopupTypeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Enums.PopupTypeEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Enums.PopupTypeEnum",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Enums.PopupTypeEnum.yml\" sourcestartlinenumber=\"1\">Defines the visual category of a popup notification.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Enums.SaveKeyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Enums.SaveKeyType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Enums.SaveKeyType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Enums.TimeDisplayFormatEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Enums.TimeDisplayFormatEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Enums.TimeDisplayFormatEnum",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Enums.TimeDisplayFormatEnum.yml\" sourcestartlinenumber=\"1\">Supported formatting modes used to calculate and render the active time state string layout.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Enums.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Enums",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.GameLoop.Button.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.GameLoop.Button.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.GameLoop.Button",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.GameLoop.Door.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.GameLoop.Door.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.GameLoop.Door",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.GameLoop.SecurityCamera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.GameLoop.SecurityCamera.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.GameLoop.SecurityCamera",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.GameLoop.SecurityCamera.yml\" sourcestartlinenumber=\"1\">Controls individual security camera parameters, tracking states, and toggles execution priority levels\nacross Cinemachine virtual camera rigs dynamically. Includes an automated linear transform-based panning routine.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.GameLoop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.GameLoop.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.GameLoop",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Interfaces.IAILogic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Interfaces.IAILogic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Interfaces.IAILogic",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Interfaces.IAILogic.yml\" sourcestartlinenumber=\"1\">Strategy interface for implementing custom AI behavior, tick intervals,\nand logical conditions for animatronics within the framework.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Interfaces.IAnimationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Interfaces.IAnimationHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Interfaces.IAnimationHandler",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Interfaces.IAnimationHandler.yml\" sourcestartlinenumber=\"1\">Strategy interface for implementing custom animation systems,\nstatic node pose baking, and jumpscare rendering mechanisms.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Interfaces.IAnimatronic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Interfaces.IAnimatronic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Interfaces.IAnimatronic",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Interfaces.IAnimatronic.yml\" sourcestartlinenumber=\"1\">The core interface contract exposed to managers and strategy handlers.\nProvides decoupled access to identity data, level settings, positioning nodes, and direct interactions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Interfaces.IDraggable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Interfaces.IDraggable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Interfaces.IDraggable",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Interfaces.IDraggable.yml\" sourcestartlinenumber=\"1\">Interface contract for implementing drag-and-drop mechanics or interactive object manipulation within the framework.\nCommonly utilized for editor tooling handles, grid layouts, or puzzle-based inventory mechanics.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Interfaces.IInteractable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Interfaces.IInteractable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Interfaces.IInteractable",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Interfaces.IInteractable.yml\" sourcestartlinenumber=\"1\">Core interface contract for implementing interactive object behaviors within the framework.\nCommonly used for doors, lights, monitors, fuses, or items the player can activate.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Interfaces.IMovementHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Interfaces.IMovementHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Interfaces.IMovementHandler",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Interfaces.IMovementHandler.yml\" sourcestartlinenumber=\"1\">Strategy interface for implementing custom movement mechanics for animatronics.\nAllows seamless switching between instant teleportation, smooth transitions, or physical navigation grid routing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Interfaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Interfaces",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Logger.PizzeriaArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Logger.PizzeriaArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Logger.PizzeriaArgs",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Logger.PizzeriaArgs.yml\" sourcestartlinenumber=\"1\">Specialized zero-allocation arguments pooling container used to parse and format data inside <xref href=\"PizzeriaFramework.Logger.PizzeriaLogger\" data-throw-if-not-resolved=\"false\"></xref> without allocations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Logger.PizzeriaLogger.OpenLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Logger.PizzeriaLogger.OpenLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Logger.PizzeriaLogger.OpenLog",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Logger.PizzeriaLogger.OpenLog.yml\" sourcestartlinenumber=\"1\">Structural optimized token that processes data chaining streams directly inside shared layout buffers memory allocations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Logger.PizzeriaLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Logger.PizzeriaLogger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Logger.PizzeriaLogger",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Logger.PizzeriaLogger.yml\" sourcestartlinenumber=\"1\">Core Zero-Allocation, highly optimized, fluent-style logging engine for the framework.\nUses <xref href=\"System.Text.StringBuilder\" data-throw-if-not-resolved=\"false\"></xref> caching and compile-time caller file paths to append structured metadata into Unity Console.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Logger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Logger",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.AI.AnimatronicData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.AI.AnimatronicData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.AI.AnimatronicData",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Managers.AI.AnimatronicData.yml\" sourcestartlinenumber=\"1\">Serializable structural registry holding configuration assets, blueprints,\nand core model links for spawning a specific animatronic type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.AI.AnimatronicManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.AI.AnimatronicManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.AI.AnimatronicManager",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Managers.AI.AnimatronicManager.yml\" sourcestartlinenumber=\"1\">Central orchestration system responsible for managing runtime initialization, difficulty scaling,\nasynchronous spawning, and threat monitoring loops across all active scene animatronics.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.AI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.AI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.AI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.Audio.PizzeriaPhoneGuyManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.Audio.PizzeriaPhoneGuyManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.Audio.PizzeriaPhoneGuyManager",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Managers.Audio.PizzeriaPhoneGuyManager.yml\" sourcestartlinenumber=\"1\">Dedicated audio manager responsible for orchestrating the Phone Guy playback pipeline.\nHandles asynchronous clip end tracking and custom UI mute state toggles without bloating the GameManager.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.Audio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.Audio.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.Audio",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.GameLoop.CameraManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.GameLoop.CameraManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.GameLoop.CameraManager",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Managers.GameLoop.CameraManager.yml\" sourcestartlinenumber=\"1\">Central management system that orchestrates camera switching logic pipelines, coordinates\nscreen-space UI static noise overlay blends, and manages async execution token lifecycles.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.GameLoop.GameManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.GameLoop.GameManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.GameLoop.GameManager",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Managers.GameLoop.GameManager.yml\" sourcestartlinenumber=\"1\">Central gameplay master state controller orchestrating the main lifecycle timelines, clock intervals,\nstructural energy usage calculation loops, and async engine token operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.GameLoop.TabletManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.GameLoop.TabletManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.GameLoop.TabletManager",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Managers.GameLoop.TabletManager.yml\" sourcestartlinenumber=\"1\">Manages the operational cycle state of the monitoring tablet hardware, coordinates timing restrictions,\nsynchronizes core energy usage modifiers, and dispatches UI state validation hooks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.GameLoop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.GameLoop.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.GameLoop",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.UI.CustomNightManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.UI.CustomNightManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.UI.CustomNightManager",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Managers.UI.CustomNightManager.yml\" sourcestartlinenumber=\"1\">Central manager for Custom Night UI screen inputs. Handles presets modifiers,\nruntime difficulty cloning, and serializing customized layouts into data matrices.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.SettingElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.SettingElement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.SettingElement",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.SettingElement.yml\" sourcestartlinenumber=\"1\">Context data container defining dynamic parameter keys, graphical object bindings,\ndefaults, and serialized callback dispatches.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.SettingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.SettingType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.SettingType",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.SettingType.yml\" sourcestartlinenumber=\"1\">Defines Supported UI input controllers types mapped inside configuration matrices.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.UI.PizzeriaSettingsManager",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Managers.UI.PizzeriaSettingsManager.yml\" sourcestartlinenumber=\"1\">Central manager component that handles global options, resolution loops,\nUnity quality matrix controls, mixer parameter interpolation, and settings serialization layers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Managers.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Managers.UI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Managers.UI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Player.PlayerHeadRotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Player.PlayerHeadRotation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Player.PlayerHeadRotation",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Player.PlayerHeadRotation.yml\" sourcestartlinenumber=\"1\">Manages the player's panoramic head rotation utilizing realistic inertia formulas based on mouse placement coordinates.\nIncludes integrated asynchronous pipelines for scripted object gaze tracking and smooth dynamic camera field-of-view (FOV) transitions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Player.PlayerInteraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Player.PlayerInteraction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Player.PlayerInteraction",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Player.PlayerInteraction.yml\" sourcestartlinenumber=\"1\">Handles player raycast detection targeting interfaces like <xref href=\"PizzeriaFramework.Interfaces.IInteractable\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"PizzeriaFramework.Interfaces.IDraggable\" data-throw-if-not-resolved=\"false\"></xref>.\nDifferentiates between click execution inputs and dragging behaviors using calculated screen-space pixel movement thresholds.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Player.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Player",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.SaveSystem.PizzeriaCrypto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.SaveSystem.PizzeriaCrypto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.SaveSystem.PizzeriaCrypto",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.SaveSystem.PizzeriaCrypto.yml\" sourcestartlinenumber=\"1\">Core cryptographic helper that generates obfuscated byte masks for stream encryption routines.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.SaveSystem.PizzeriaSaveManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.SaveSystem.PizzeriaSaveManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.SaveSystem.PizzeriaSaveManager",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.SaveSystem.PizzeriaSaveManager.yml\" sourcestartlinenumber=\"1\">Universal, high-performance binary save system that supports all data types\nby caching raw byte blocks encrypted via dynamic 64-bit CPU register masks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.SaveSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.SaveSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.SaveSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.ScriptableObjects.AnimatronicConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.ScriptableObjects.AnimatronicConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.ScriptableObjects.AnimatronicConfig",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.ScriptableObjects.AnimatronicConfig.yml\" sourcestartlinenumber=\"1\">Data architecture asset holding configuration parameters, identity markers, and base time metrics for an animatronic character.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.ScriptableObjects.CharacterDifficultyData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.ScriptableObjects.CharacterDifficultyData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.ScriptableObjects.CharacterDifficultyData",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.ScriptableObjects.CharacterDifficultyData.yml\" sourcestartlinenumber=\"1\">Serializable data structure pairing an animatronic configuration asset directly with a specific runtime AI difficulty level.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.ScriptableObjects.NightProfile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.ScriptableObjects.NightProfile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.ScriptableObjects.NightProfile",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.ScriptableObjects.NightProfile.yml\" sourcestartlinenumber=\"1\">ScriptableObject profile managing shift durations, time speed parameters, and character difficulty arrays for a specific night configuration.</p>\n<p>Example of use:</p>\n<pre><code class=\"lang-csharp\">int currentAggression = currentProfile.GetAILevelForCharacter(\"Freddy\");</code></pre>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.ScriptableObjects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.ScriptableObjects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.ScriptableObjects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Structs.ActionsStruct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Structs.ActionsStruct.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Structs.ActionsStruct",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Structs.ActionsStruct.yml\" sourcestartlinenumber=\"1\">Represents a single action button inside a popup notification.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Structs.ButtonUnlocksWithSaveStruct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Structs.ButtonUnlocksWithSaveStruct.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Structs.ButtonUnlocksWithSaveStruct",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Structs.DecomposedTimeData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Structs.DecomposedTimeData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Structs.DecomposedTimeData",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Structs.DecomposedTimeData.yml\" sourcestartlinenumber=\"1\">Serializable registry layout containing hours and minutes split into individual digits.\nPrimarily used to handle mechanical split-flap or digital rolling animation clocks at night ends.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Structs.OnAiChangedEventStruct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Structs.OnAiChangedEventStruct.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Structs.OnAiChangedEventStruct",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Structs.OnAiChangedEventStruct.yml\" sourcestartlinenumber=\"1\">Serializable structural pair linking a specific AI level index constraint to a native UnityEvent response hook.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Structs.PopupStruct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Structs.PopupStruct.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Structs.PopupStruct",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Structs.PopupStruct.yml\" sourcestartlinenumber=\"1\">Configuration data for a single popup notification.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Structs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Structs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Structs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.UI.GameLoop.GameOverScreen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.UI.GameLoop.GameOverScreen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.UI.GameLoop.GameOverScreen",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.UI.GameLoop.GameOverScreen.yml\" sourcestartlinenumber=\"1\">UI controller responsible for rendering the Game Over presentation layer.\nDynamically injects the attacking animatronic's visual portrait sprite and localized tactical survival description.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.UI.GameLoop.NightSequence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.UI.GameLoop.NightSequence.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.UI.GameLoop.NightSequence",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.UI.GameLoop.NightSequence.yml\" sourcestartlinenumber=\"1\">UI manager responsible for driving the cinematic entry (Night Intro) and victory (6 AM) presentation screens.\nDecomposes dynamic time integers into separate digits to sync with structural mechanical clock flip animations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.UI.GameLoop.PizzeriaPause.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.UI.GameLoop.PizzeriaPause.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.UI.GameLoop.PizzeriaPause",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.UI.GameLoop.PizzeriaPause.yml\" sourcestartlinenumber=\"1\">Component managing the core gameplay pause state.\nAutomatically alters the global physics time scale and dispatches structural lifecycle events to toggle interface overlay canvases.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.UI.GameLoop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.UI.GameLoop.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.UI.GameLoop",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.UI.Menu.CustomNightCharacterSlot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.UI.Menu.CustomNightCharacterSlot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.UI.Menu.CustomNightCharacterSlot",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.UI.Menu.CustomNightCharacterSlot.yml\" sourcestartlinenumber=\"1\">UI controller slot governing interaction inputs, display text metrics,\nand conditional level change callbacks for a separate character configuration panel.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.UI.Menu.PizzeriaFlexibleMenuController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.UI.Menu.PizzeriaFlexibleMenuController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.UI.Menu.PizzeriaFlexibleMenuController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.UI.Menu.PizzeriaMenuPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.UI.Menu.PizzeriaMenuPage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.UI.Menu.PizzeriaMenuPage",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.UI.Menu.PizzeriaMenuPage.yml\" sourcestartlinenumber=\"1\">Component managing the state, lifecycle, and animation properties of an individual decoupled menu page panel.\nWorks in tandem with <xref href=\"PizzeriaFramework.UI.Menu.PizzeriaFlexibleMenuController\" data-throw-if-not-resolved=\"false\"></xref> via Animator Blend Trees.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.UI.Menu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.UI.Menu.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.UI.Menu",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Utils.CameraCameraUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Utils.CameraCameraUtils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Utils.CameraCameraUtils",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Utils.CameraCameraUtils.yml\" sourcestartlinenumber=\"1\">Utility component that dynamically creates screen-matched RenderTextures for security cameras.\nImplements real-time 3D visibility checks using viewport mapping and physical raycasting occlusion tests.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Utils.DraggableWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Utils.DraggableWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Utils.DraggableWindow",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Utils.DraggableWindow.yml\" sourcestartlinenumber=\"1\">UI utility component that implements the <xref href=\"UnityEngine.EventSystems.IDragHandler\" data-throw-if-not-resolved=\"false\"></xref> interface.\nAllows seamless, real-time mouse dragging of UI panels, popup nodes, or custom window forms across canvas zones.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Utils.EventsUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Utils.EventsUtils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Utils.EventsUtils",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Utils.EventsUtils.yml\" sourcestartlinenumber=\"1\">Utility bridge component designed to expose simple scene-management methods to Unity lifecycle systems.\nIdeal for triggering level loads directly via Animation Events, UnityEvents, or Timeline track keyframes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Utils.PizzeriaPopupNotify.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Utils.PizzeriaPopupNotify.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Utils.PizzeriaPopupNotify",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Utils.PizzeriaPopupNotify.yml\" sourcestartlinenumber=\"1\">A persistent, queued popup notification system with animated transitions and dynamic buttons.\nAutomatically initializes before the first scene loads and survives across scene changes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Utils.PizzeriaSceneLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Utils.PizzeriaSceneLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Utils.PizzeriaSceneLoader",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Utils.PizzeriaSceneLoader.yml\" sourcestartlinenumber=\"1\">Core non-blocking asynchronous scene manager. Handles runtime canvas generation,\nUI slider progression mapping, and automatic data saving serialization wrappers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Utils.SerializableType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Utils.SerializableType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Utils.SerializableType",
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Utils.SerializableType.yml\" sourcestartlinenumber=\"1\">A custom utility wrapper that enables native Unity serialization for standard C# System.Type properties.\nImplements <xref href=\"UnityEngine.ISerializationCallbackReceiver\" data-throw-if-not-resolved=\"false\"></xref> to safely convert type data into assembly strings and back.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Utils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Utils",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Wizard.PathConditionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Wizard.PathConditionData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Wizard.PathConditionData",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PizzeriaFramework.Wizard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PizzeriaFramework.Wizard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PizzeriaFramework.Wizard",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pizzeria-framework_logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pizzeria-framework_logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pizzeria-framework_logo.png.meta",
+      "output": {
+        "resource": {
+          "relative_path": "images/pizzeria-framework_logo.png.meta"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "public/main.css",
+      "output": {
+        "resource": {
+          "relative_path": "public/main.css"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "public/main.css.meta",
+      "output": {
+        "resource": {
+          "relative_path": "public/main.css.meta"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

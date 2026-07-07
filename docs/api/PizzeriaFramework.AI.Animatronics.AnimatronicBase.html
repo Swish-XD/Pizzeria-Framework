@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AnimatronicBase | Pizzeria Framework Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AnimatronicBase | Pizzeria Framework Documentation ">
+      
+      <meta name="description" content="Base abstract class for all animatronics in the framework. Manages the asynchronous AI tick loops, components injection, modular strategy handlers, movement, and event subscriptions.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Swish-XD/Fazbear-Framework/new/main/apiSpec/new?filename=PizzeriaFramework_AI_Animatronics_AnimatronicBase.md&amp;value=---%0Auid%3A%20PizzeriaFramework.AI.Animatronics.AnimatronicBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/pizzeria-framework_logo.png" alt="Pizzeria Framework">
+            Pizzeria Framework
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase">
+
+
+
+  <h1 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase" class="text-break">
+Class AnimatronicBase  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PizzeriaFramework.html">PizzeriaFramework</a>.<a class="xref" href="PizzeriaFramework.AI.html">AI</a>.<a class="xref" href="PizzeriaFramework.AI.Animatronics.html">Animatronics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>PizzeriaFramework.Runtime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Base abstract class for all animatronics in the framework.
+Manages the asynchronous AI tick loops, components injection, modular strategy handlers, movement, and event subscriptions.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequireComponent(typeof(Animator))]
+public abstract class AnimatronicBase : MonoBehaviour, IAnimatronic</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><span class="xref">AnimatronicBase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="PizzeriaFramework.Interfaces.IAnimatronic.html">IAnimatronic</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="PizzeriaFramework.AI.Animatronics.StandardAnimatronic.html">StandardAnimatronic</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">MonoBehaviour.IsInvoking()</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.CancelInvoke()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopCoroutine(Coroutine)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopAllCoroutines()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.destroyCancellationToken</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.useGUILayout</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.didStart</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.didAwake</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.runInEditMode</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.enabled</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.isActiveAndEnabled</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <span class="xref">Component.TryGetComponent&lt;T&gt;(out T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponents&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentIndex()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <span class="xref">Component.CompareTag(TagHandle)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.transformHandle</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetEntityId()</span>
+    </div>
+    <div>
+      <span class="xref">Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T, Transform, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, Vector3, Quaternion, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Object.InstantiateAsync&lt;T&gt;(T, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Object.InstantiateAsync&lt;T&gt;(T, Vector3, Quaternion, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Vector3, Quaternion, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Scene)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, InstantiateParameters)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, InstantiateParameters)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsInactive, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DontDestroyOnLoad(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsInactive, FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_OnAttackTriggered" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.OnAttackTriggered">
+  OnAttackTriggered
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event triggered when the animatronic enters a destination node that represents the player's office room.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">animatronic.OnAttackTriggered += (attacker) =&gt; ExecuteOfficeDefenseLogic();</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;AnimatronicBase&gt; OnAttackTriggered</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="PizzeriaFramework.AI.Animatronics.AnimatronicBase.html">AnimatronicBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_aiLogic" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.aiLogic">
+  aiLogic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The modular strategy component handling the evaluations of ticks, interval modifiers, and specific logic conditions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IAILogic aiLogic</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PizzeriaFramework.Interfaces.IAILogic.html">IAILogic</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_animationHandler" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.animationHandler">
+  animationHandler
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The modular strategy component managing animator states, static baked node poses, and jumpscare rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IAnimationHandler animationHandler</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PizzeriaFramework.Interfaces.IAnimationHandler.html">IAnimationHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_currentNode" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.currentNode">
+  currentNode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The node where the animatronic is currently located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AnimatronicNode currentNode</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PizzeriaFramework.AI.Animatronics.AnimatronicNode.html">AnimatronicNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_movementHandler" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.movementHandler">
+  movementHandler
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The modular strategy component responsible for movement execution between nodes (e.g., instant teleport, smooth run, crawling).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IMovementHandler movementHandler</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PizzeriaFramework.Interfaces.IMovementHandler.html">IMovementHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_AILevel_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.AILevel*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_AILevel" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.AILevel">
+  AILevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the current AI difficulty level (0 to 20). 0 disables the movement loop.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">animatronic.AILevel = 20; // Maximum aggressiveness</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AILevel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_BaseTickInterval_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.BaseTickInterval*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_BaseTickInterval" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.BaseTickInterval">
+  BaseTickInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the base interval in seconds between AI logic ticks from config. Fallbacks to 5 seconds if config is null.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">float checkCooldown = animatronic.BaseTickInterval;</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float BaseTickInterval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_Config_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.Config*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_Config" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.Config">
+  Config
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the reference to the underlying configuration ScriptableObject.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">AnimatronicConfig currentConfig = animatronic.Config;</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimatronicConfig Config { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PizzeriaFramework.ScriptableObjects.AnimatronicConfig.html">AnimatronicConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_CurrentNode_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.CurrentNode*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_CurrentNode" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.CurrentNode">
+  CurrentNode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the reference to the node where the animatronic is currently standing.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">AnimatronicNode currentNode = animatronic.CurrentNode;</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimatronicNode CurrentNode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PizzeriaFramework.AI.Animatronics.AnimatronicNode.html">AnimatronicNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_DebugTimeUntilNextTick_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.DebugTimeUntilNextTick*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_DebugTimeUntilNextTick" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.DebugTimeUntilNextTick">
+  DebugTimeUntilNextTick
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Debug utility tracking the precise remaining time in seconds before the next AI logic calculation.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">float uiCountdown = animatronic.DebugTimeUntilNextTick;</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DebugTimeUntilNextTick { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_ID_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.ID*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_ID" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.ID">
+  ID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the unique string identifier of the animatronic from the config. Fallbacks to the GameObject name if config is null.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">string id = animatronic.ID;</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ID { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_IsBeingWatched_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.IsBeingWatched*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_IsBeingWatched" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.IsBeingWatched">
+  IsBeingWatched
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the player is currently observing this animatronic via cameras.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">animatronic.IsBeingWatched = cameraManager.IsCurrentCameraNode(animatronic.CurrentNode);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBeingWatched { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_Transform_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.Transform*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_Transform" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.Transform">
+  Transform
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the cache-safe reference to the animatronic's transform component.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">Vector3 currentPos = animatronic.Transform.position;</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform Transform { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_InitializeConfig_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.InitializeConfig*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_InitializeConfig_PizzeriaFramework_ScriptableObjects_AnimatronicConfig_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.InitializeConfig(PizzeriaFramework.ScriptableObjects.AnimatronicConfig)">
+  InitializeConfig(AnimatronicConfig)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Injectable configuration initializer. Builds modular strategies, sets difficulty stats, links animators, and prepares the object for runtime.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">animatronic.InitializeConfig(loadedConfigAsset);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeConfig(AnimatronicConfig sourceConfig)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceConfig</code> <a class="xref" href="PizzeriaFramework.ScriptableObjects.AnimatronicConfig.html">AnimatronicConfig</a></dt>
+    <dd><p>The ScriptableObject asset containing initial values.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_MoveTo_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.MoveTo*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_MoveTo_PizzeriaFramework_AI_Animatronics_AnimatronicNode_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.MoveTo(PizzeriaFramework.AI.Animatronics.AnimatronicNode)">
+  MoveTo(AnimatronicNode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes a logical transition to a new path node. Notifies the leaving and entering nodes, launches movement animations, and fires attack hooks if appropriate.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">animatronic.MoveTo(adjacentNode);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MoveTo(AnimatronicNode targetNode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>targetNode</code> <a class="xref" href="PizzeriaFramework.AI.Animatronics.AnimatronicNode.html">AnimatronicNode</a></dt>
+    <dd><p>The specific node to move towards.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_OnDestroy_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.OnDestroy*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_OnDestroy" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.OnDestroy">
+  OnDestroy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unity lifecycle event. Clears background tasks and forces the animation handler components to dispose of legacy assets safely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDestroy()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_OnDisable_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.OnDisable*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_OnDisable" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.OnDisable">
+  OnDisable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unity lifecycle event. Ensures all background threads and asynchronous monitors are unregistered and killed if the component is disabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDisable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_OnNightEnded_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.OnNightEnded*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_OnNightEnded" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.OnNightEnded">
+  OnNightEnded()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event listener to cleanly terminate all AI logic processes immediately when the night comes to an end.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">GameManager.Instance.OnNightEnd.AddListener(animatronic.OnNightEnded);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnNightEnded()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_OnNightStarted_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.OnNightStarted*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_OnNightStarted" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.OnNightStarted">
+  OnNightStarted()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Entry point for game state managers. Spawns the animatronic at the initial position and kicks off the async AI tick loop.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">GameManager.Instance.OnNightEnd.AddListener(animatronic.OnNightEnded);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnNightStarted()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_SetupComponents_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.SetupComponents*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_SetupComponents" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.SetupComponents">
+  SetupComponents()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Abstract factory method. Must be overridden in derived classes to inject specific strategy handlers (AI, Movement, Animation).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetupComponents()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_StartAI_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.StartAI*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_StartAI" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.StartAI">
+  StartAI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initiates or restarts the asynchronous AI loop. Registers the instance to the debugging performance monitor in editor builds.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">animatronic.StartAI();</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartAI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_StopAI_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.StopAI*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_StopAI" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.StopAI">
+  StopAI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cancels, disposes, and nullifies the current AI asynchronous loops to safely stop all background processing.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">animatronic.StopAI();</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopAI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_TeleportTo_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.TeleportTo*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_TeleportTo_PizzeriaFramework_AI_Animatronics_AnimatronicNode_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.TeleportTo(PizzeriaFramework.AI.Animatronics.AnimatronicNode)">
+  TeleportTo(AnimatronicNode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instantly overrides the animatronic's placement, setting its raw position and rotation vectors directly to the coordinates of the target node.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">if (startingNode != null) TeleportTo(startingNode);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TeleportTo(AnimatronicNode targetNode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>targetNode</code> <a class="xref" href="PizzeriaFramework.AI.Animatronics.AnimatronicNode.html">AnimatronicNode</a></dt>
+    <dd><p>The target node to teleport the animatronic to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_TriggerJumpscare_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.TriggerJumpscare*"></a>
+
+  <h3 id="PizzeriaFramework_AI_Animatronics_AnimatronicBase_TriggerJumpscare_UnityEngine_Transform_" data-uid="PizzeriaFramework.AI.Animatronics.AnimatronicBase.TriggerJumpscare(UnityEngine.Transform)">
+  TriggerJumpscare(Transform)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Abstract method to trigger a jumpscare. Derived classes must handle freezing the gameplay state, parenting to the player camera, and playing audio/video effects.</p>
+<p>Example of use:</p>
+<pre><code class="lang-csharp">attacker.TriggerJumpscare(Camera.main.transform);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void TriggerJumpscare(Transform cameraTarget)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cameraTarget</code> <span class="xref">Transform</span></dt>
+    <dd><p>The transform references of the player camera viewport.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Swish-XD/Fazbear-Framework/blob/main/Packages/com.swish.pizzeriaframework/Scripts/Abstract/AnimatronicBase.cs/#L18" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
