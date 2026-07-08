@@ -176,7 +176,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "PizzeriaFramework.Components.InstantMovementHandler",
-      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Components.InstantMovementHandler.yml\" sourcestartlinenumber=\"1\">Movement strategy component that handles instant teleportation of an animatronic between nodes.\nProvides low-overhead positioning suitable for classic FNAF mechanics where animatronics change rooms instantly.</p>\n"
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Components.InstantMovementHandler.yml\" sourcestartlinenumber=\"1\">Movement strategy component that handles instant teleportation of an animatronic between nodes.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -190,7 +190,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "PizzeriaFramework.Components.StandardAILogic",
-      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Components.StandardAILogic.yml\" sourcestartlinenumber=\"1\">Custom FNAF path-finding AI logic handler strategy.\nImplements weighted node evaluation, dynamic distance-to-office difficulty scaling, and automated fallback logic.</p>\n"
+      "Summary": "<p sourcefile=\"api/PizzeriaFramework.Components.StandardAILogic.yml\" sourcestartlinenumber=\"1\">Custom path-finding AI logic handler strategy.\nImplements weighted node evaluation, dynamic distance-to-office difficulty scaling, and automated fallback logic.</p>\n"
     },
     {
       "type": "ManagedReference",
