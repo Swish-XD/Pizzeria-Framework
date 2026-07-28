@@ -13,4 +13,4 @@
 This framework is currently in **early development**. Your feedback helps shape the future of the tool! If you have any suggestions, feature requests, or run into issues, don't be shy — feel free to open an issue on the official GitHub project page. *(You are here right now!)*
 
 ## Download
-You can purchase this framework on the [Unity Asset Store](https://assetstore.unity.com/packages/slug/389876 "Pizzeria Framework Asset Store").
+You can purchase this framework on the [Unity Asset Store](https://assetstore.unity.com/packages/slug/389876 "Pizzeria Framework Asset Store"). (not avaiable right now)
